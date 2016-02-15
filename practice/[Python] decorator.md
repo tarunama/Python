@@ -77,22 +77,6 @@ def login_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login
     return actual_decorator
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-15-847ea8bb4685> in <module>()
-    ----> 1 def login_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=None):
-          2     """
-          3     Decorator for views that checks that the user is logged in, redirecting
-          4     to the log-in page if necessary.
-          5     """
-
-
-    NameError: name 'REDIRECT_FIELD_NAME' is not defined
-
-
 #### user_passes_test
 
 
@@ -129,21 +113,6 @@ def user_passes_test(test_func, login_url=None, redirect_field_name=REDIRECT_FIE
     # 結局これを返している
     return decorator
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-18-ca73029a7921> in <module>()
-    ----> 1 def user_passes_test(test_func, login_url=None, redirect_field_name=REDIRECT_FIELD_NAME):
-          2     """
-          3     Decorator for views that checks that the user passes the given test,
-          4     redirecting to the log-in page if necessary. The test should be a callable
-          5     that takes the user object and returns True if the user passes.
-
-
-    NameError: name 'REDIRECT_FIELD_NAME' is not defined
 
 
 ## @wraps?
